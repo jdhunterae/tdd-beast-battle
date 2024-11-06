@@ -1,0 +1,51 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore bundler config and installed gems (for non-containerized environments)
+.bundle/
+vendor/bundle/
+
+# Ignore common Ruby build files
+*.gem
+.ruby-version
+.rbenv-vars
+.rvmrc
+
+# Ignore test artifacts
+test/reports/
+test/tmp/
+
+# Ignore logs and temp files
+log/
+tmp/
+*.log
+*.tmp
+*.swp
+
+# Ignore Rake-related artifacts
+.rake_tasks~
+
+# Ignore RuboCop and other linter artifacts
+.rubocop-http-cache/
+.rubocop_cache/
+.rubocop-https---*
+.rubocop.yml~
+
+# Ignore minitest artifacts
+coverage/
+test_output.xml
+
+# Ignore editor or OS-specific files
+*~
+*.sublime-project
+*.sublime-workspace
+.idea/
+.vscode/
+.vscode-test/
+
+# Ignore project dependencies if you aren't using Bundler config
+Gemfile.lock
+
+# Ignore environment-specific config (optional)
+.env
