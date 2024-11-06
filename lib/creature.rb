@@ -28,14 +28,14 @@ class Creature
 
   def roll_initiative(seed: nil)
     @tick_counter = if seed.nil?
-                      # generates a random number between 0 and 1 less than attack_intverval
-                      rand(attack_interval)
+                      # generates a random number between 0 and 2 less than attack_intverval
+                      rand(attack_interval - 1)
                     elsif seed.negative?
                       # shortcut to instant attack (have the jump on an enemy)
-                      attack_interval + 1
+                      attack_interval
                     else
                       # assign a legal seed number, including instant attack
-                      seed.clamp(0, attack_interval + 1)
+                      seed.clamp(0, attack_interval)
                     end
   end
 

@@ -78,7 +78,11 @@ describe Creature do
       bools = []
       25.times do
         @creature.roll_initiative
-        bools.append @creature.can_attack?
+
+        can_attack_now = @creature.can_attack?
+        bools.append can_attack_now
+
+        assert_equal false, can_attack_now
       end
 
       refute_includes bools, true
